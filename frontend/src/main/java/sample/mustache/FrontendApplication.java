@@ -16,14 +16,14 @@
 
 package sample.mustache;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
 
 @SpringBootApplication
-public class SampleApplication {
+public class FrontendApplication {
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(SampleApplication.class, args);
+		SpringApplication.run(FrontendApplication.class, args);
 	}
 
 }

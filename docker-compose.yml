@@ -1,0 +1,8 @@
+frontend:
+  image: no.finn.workshop.cloud/frontend
+  links:
+    - backend
+  ports:
+    - "8000:22222"
+backend:
+  image: no.finn.workshop.cloud/backend

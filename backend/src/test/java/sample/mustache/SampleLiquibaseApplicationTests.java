@@ -16,14 +16,13 @@
 
 package sample.mustache;
 
-import java.net.ConnectException;
+import org.junit.*;
+import org.springframework.boot.test.*;
+import org.springframework.core.*;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.springframework.boot.test.OutputCapture;
-import org.springframework.core.NestedCheckedException;
+import java.net.*;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class SampleLiquibaseApplicationTests {
 
@@ -33,7 +32,7 @@ public class SampleLiquibaseApplicationTests {
 	@Test
 	public void testDefaultSettings() throws Exception {
 		try {
-			SampleApplication.main(new String[0]);
+			BackendApplication.main(new String[0]);
 		}
 		catch (IllegalStateException ex) {
 			if (serverNotRunning(ex)) {

@@ -32,7 +32,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: first_name
-                  value: Marcel
+                  value: Sondre
               - column:
                   name: last_name
-                  value: Overdijk
+                  value: Gravir

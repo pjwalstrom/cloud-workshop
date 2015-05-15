@@ -1,0 +1,4 @@
+rootProject.name = 'travel-app'
+
+include ':frontend'
+include ':backend'
