@@ -7,8 +7,6 @@ echo ""
 apt-get update
 apt-get install --yes docker.io
 
-# No need for maven which is preinstalled in the virtual machine
-rm -rf ~/bin/*
 
 echo
 echo "Installing docker-compose..."
@@ -22,7 +20,17 @@ curl -Ls https://github.com/docker/machine/releases/download/v0.2.0/docker-machi
 chmod +x /usr/local/bin/docker-machine
 docker-machine --version
 
-echo
-echo "Initial build of project"
-# Just to make sure gradle and the build's dependencies are downloaded
-/vagrant/gradlew build
+
+# No need for maven which is preinstalled in the virtual machine
+sudo -i -u vagrant rm -rf ~/bin/*
+
+echo ""
+echo "Installing Gradle..."
+echo $HOME
+echo ""
+sudo -i -u vagrant /vagrant/gradlew -q --version
+
+echo ""
+echo "Initial build of project..."
+echo ""
+sudo -i -u vagrant /vagrant/gradlew -b /vagrant/build.gradle buildDocker -x test
