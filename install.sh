@@ -1,5 +1,10 @@
 #!/bin/sh
 
+echo "Installing docker..."
+echo ""
+apt-get update
+apt-get install --yes docker.io
+
 # No need for maven which is preinstalled in the virtual machine
 rm -rf ~/bin/*
 

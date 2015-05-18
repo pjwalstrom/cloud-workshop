@@ -13,11 +13,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.box = "antapos/ubuntu-trusty64-jdk8-maven"
-
-  config.vm.provision "docker" do
-   # d.pull_images "small_java"
-   # d.pull_images "postgres"
-  end
-
   config.vm.provision "shell", path: "install.sh"
 end
