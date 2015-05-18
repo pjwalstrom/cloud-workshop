@@ -1,4 +1,4 @@
-rootProject.name = 'travel-app'
+rootProject.name = 'cloud-workshop'
 
 include ':frontend'
 include ':backend'
