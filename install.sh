@@ -45,8 +45,10 @@ fi
 docker-machine --version
 
 
+# All done below here is run as the vagrant user
+
 # No need for maven which is preinstalled in the virtual machine
-sudo -i -u vagrant rm -rf ~/bin/*
+sudo -i -u vagrant rm -rf bin
 
 echo ""
 echo "Installing Gradle..."
