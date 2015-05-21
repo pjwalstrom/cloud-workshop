@@ -13,5 +13,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.box = "antapos/ubuntu-trusty64-jdk8-maven"
+
+  config.vm.network "private_network", ip: "192.168.12.34"
+
   config.vm.provision "shell", path: "install.sh"
 end
