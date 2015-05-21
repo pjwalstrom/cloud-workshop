@@ -20,7 +20,8 @@ docker pull jeanblanchard/busybox-java:8
 
 echo ""
 
-if [ -x docker-compose ]; then
+
+if hash docker-compose 2> /dev/null; then
   echo "Already installed docker-compose..."
 else
   echo "Installing docker-compose..."
@@ -33,7 +34,7 @@ docker-compose --version
 
 echo ""
 
-if [ -x docker-machine ]; then
+if hash docker-machine 2> /dev/null; then
   echo "Already installed docker-machine..."
 else
   echo "Installing docker-machine..."
