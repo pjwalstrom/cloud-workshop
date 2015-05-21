@@ -50,7 +50,6 @@ sudo -i -u vagrant rm -rf ~/bin/*
 
 echo ""
 echo "Installing Gradle..."
-echo $HOME
 echo ""
 sudo -i -u vagrant /vagrant/gradlew -q --version
 
