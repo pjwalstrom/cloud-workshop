@@ -16,5 +16,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: "192.168.12.34"
 
-  config.vm.provision "shell", path: "install.sh"
+  config.vm.provision "shell", path: "helpers/install.sh"
 end
