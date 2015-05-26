@@ -1,0 +1,17 @@
+global
+    maxconn 256
+    debug
+
+defaults
+    mode http
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+{{ range services }}
+{{ if key .Name }}
+listen {{ .Name }}
+    bind *:{{ key .Name }}{{ range service .Name }}
+    server {{ .Node }} {{ .Address }}:{{ .Port }}{{ end }}
+{{ end }}
+{{ end }}
