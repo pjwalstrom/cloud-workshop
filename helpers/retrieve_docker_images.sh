@@ -16,4 +16,3 @@ docker pull progrium/consul
 
 printf "  asteris/haproxy-consul:latest..."
 docker pull asteris/haproxy-consul
-                                                                     5
