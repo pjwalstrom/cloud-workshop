@@ -4,7 +4,7 @@
 
 Virtualbox and Vagrant must be installed before setting up the workshop.
 
-On OS X this can be done easily by `brew`:
+On OS X this can be done easily with `brew`:
 
 ```
 $ brew install caskroom/cask/brew-cask
