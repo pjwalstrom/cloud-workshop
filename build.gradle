@@ -42,6 +42,10 @@ subprojects {
                 from war
                 into stageDir
             }
+            copy {
+                from file('src/main/docker/launch.sh')
+                into stageDir
+            }
         }
     }
 }
