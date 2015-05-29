@@ -3,7 +3,7 @@ frontend:
   links:
     - backend
   ports:
-    - "8000:22222"
+    - "8000:33333"
 backend:
   image: no.finn.workshop.cloud/backend
   links:
