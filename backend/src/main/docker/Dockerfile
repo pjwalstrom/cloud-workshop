@@ -1,12 +1,12 @@
 FROM jeanblanchard/busybox-java:8
 MAINTAINER 'Stig Kleppe-Jørgensen "from.github@nisgits.net"'
-VOLUME /tmp
 
 EXPOSE 33333
-ENTRYPOINT [ "/tmp/launch.sh" ]
+ENTRYPOINT [ "/bin/sh", "/tmp/launch.sh" ]
 
-RUN wget -q --no-check-certificate -O /tmp/consul.tar.gz https://github.com/hashicorp/envconsul/releases/download/v0.5.0/envconsul_0.5.0_linux_amd64.tar.gz && \
-  tar -xzvf /tmp/consul.tar.gz -C /usr/bin/ --strip-components=1
+RUN curl -sL http://cldup.com/XPw5-FrHJz.gz | \
+  gunzip -c | tar -x -C /tmp/ && \
+  mv /tmp/envconsul_0.5.0_linux_amd64/envconsul /usr/bin/
 
-ADD launch.sh /tmp/launch.sh
-ADD backend.war /tmp/app.war
+COPY launch.sh /tmp/launch.sh
+COPY backend.war /tmp/app.war
