@@ -41,7 +41,7 @@ subprojects {
                 into stageDir
             }
             copy {
-                from file('src/main/docker/launch.sh')
+                from rootProject.file('helpers/launch.sh')
                 into stageDir
             }
         }
