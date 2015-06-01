@@ -1,17 +1,13 @@
 global
     maxconn 256
-    debug
 
 defaults
-    mode http
+    mode tcp
     timeout connect 5000ms
     timeout client 50000ms
     timeout server 50000ms
 
-{{ range services }}
-{{ if key .Name }}
+{{ range services }}{{ $port_key := printf "registrator/unique_port/%s_port" .Name }}{{ if key $port_key }}
 listen {{ .Name }}
-    bind *:{{ key .Name }}{{ range service .Name }}
-    server {{ .Node }} {{ .Address }}:{{ .Port }}{{ end }}
-{{ end }}
-{{ end }}
+    bind *:{{ key $port_key }}{{ range service .Name }}
+    server {{ .Node }} {{ .Address }}:{{ .Port }} check{{ end }}{{ end }}{{ end }}
