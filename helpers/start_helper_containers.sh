@@ -23,8 +23,7 @@ docker run --name registrator -d -h vagrant \
 # Must remove symbolic link created by the container from an eventual earlier run
 sudo rm -f /tmp/haproxy.tmpl
 cp -f /vagrant/helpers/consul.tmpl /tmp/
-docker run --name=haproxy -d \
+docker run --name=haproxy --net=host -d \
     -v /tmp:/consul-template/template.d \
-    -e CONSUL_LOGLEVEL=debug \
     -e CONSUL_CONNECT=192.168.12.34:8500 \
     asteris/haproxy-consul
