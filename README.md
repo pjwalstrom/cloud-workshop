@@ -29,6 +29,9 @@ With this you can just open `http://localdocker:<port>`.
 
 ## Nice to know
 
+To get into the virtual machine, run `vagrant ssh`. The project is mounted onto `/vagrant` inside the
+VM, so just go there before running any commands.
+
 To stop the virtual machine started with `vagrant up`, you can do `vagrant suspend`. Then to start it again,
 you can do `vagrant resume`. When you are finished with the workshop, you can use `vagrant destroy` to remove
 all traces of the virtual machine.
@@ -55,6 +58,7 @@ all traces of the virtual machine.
   * `docker-compose -f docker-compose.consul.yml ...`
   * try to scale backend
 * Work with a docker server in the cloud (Digital Ocean)
+  * first load the `env_for_digital_ocean.sh` into current shell
   * `docker-machine ...`
   * create a new machine
   * list current machines
