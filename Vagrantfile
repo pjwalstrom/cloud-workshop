@@ -12,6 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.cpus = 2
   end
 
+  # TODO change to boxcutter/ubuntu1410-docker and install java on top
   config.vm.box = "antapos/ubuntu-trusty64-jdk8-maven"
 
   config.vm.network "private_network", ip: "192.168.12.34"
