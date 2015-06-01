@@ -55,6 +55,7 @@ all traces of the virtual machine.
   * `docker-compose -f docker-compose.postgres.yml ...`
   * try to scale backend
 * Run frontend/backend with Consul/PostgreSQL
+  * start helper containers (`/vagrant/helpers/start_helper_containers.s`)
   * `docker-compose -f docker-compose.consul.yml ...`
   * try to scale backend
 * Work with a docker server in the cloud (Digital Ocean)
