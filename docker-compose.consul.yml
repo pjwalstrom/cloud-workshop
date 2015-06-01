@@ -1,0 +1,22 @@
+frontend:
+  image: no.finn.workshop.cloud/frontend
+  ports:
+    - "8000:33333"
+  environment:
+    PROXY_HOST: 192.168.12.34
+    SPRING_PROFILES_ACTIVE: consul
+backend:
+  image: no.finn.workshop.cloud/backend
+  ports:
+    - "33333"
+  environment:
+    PROXY_HOST: 192.168.12.34
+    SERVICE_NAME: backend
+    SPRING_PROFILES_ACTIVE: consul
+db:
+  image: kiasaki/alpine-postgres
+  ports:
+    - "5432"
+  environment:
+    SERVICE_NAME: db
+    POSTGRES_PASSWORD: mysecretpassword

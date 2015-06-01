@@ -1,0 +1,11 @@
+server:
+  port: 33333
+backend:
+  url: http://backend:33333/person
+
+---
+
+spring:
+  profiles: consul
+backend:
+  url: http://${PROXY_HOST}:${BACKEND_PORT}/person

@@ -6,9 +6,3 @@ frontend:
     - "8000:33333"
 backend:
   image: no.finn.workshop.cloud/backend
-  links:
-    - db
-db:
-  image: postgres
-  environment:
-    POSTGRES_PASSWORD: mysecretpassword

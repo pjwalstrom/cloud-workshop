@@ -1,0 +1,23 @@
+server:
+  port: 33333
+
+---
+
+spring:
+  profiles: postgres
+  datasource:
+    url: jdbc:postgresql://db/postgres
+    username: postgres
+    password: mysecretpassword
+    driver-class-name: org.postgresql.Driver
+
+---
+
+spring:
+  profiles: consul
+  datasource:
+    url: jdbc:postgresql://${PROXY_HOST}:${DB_PORT}/postgres
+    maxAge: 20
+    username: postgres
+    password: mysecretpassword
+    driver-class-name: org.postgresql.Driver

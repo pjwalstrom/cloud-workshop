@@ -1,0 +1,16 @@
+frontend:
+  image: no.finn.workshop.cloud/frontend
+  links:
+    - backend
+  ports:
+    - "8000:33333"
+backend:
+  image: no.finn.workshop.cloud/backend
+  links:
+    - db
+  environment:
+    SPRING_PROFILES_ACTIVE: postgres
+db:
+  image: kiasaki/alpine-postgres
+  environment:
+    POSTGRES_PASSWORD: mysecretpassword
