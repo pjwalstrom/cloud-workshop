@@ -16,3 +16,6 @@ docker pull progrium/consul
 
 printf "  asteris/haproxy-consul:latest..."
 docker pull asteris/haproxy-consul
+
+printf "  kiasaki/alpine-postgres:latest..."
+docker pull kiasaki/alpine-postgres
