@@ -60,7 +60,7 @@ all traces of the virtual machine.
     * look at the logs to see if the second backend is used
     * what happens and why?
 * Run frontend/backend with Consul/PostgreSQL
-    * start helper containers (`/vagrant/helpers/start_helper_containers.s`)
+    * start helper containers (`/vagrant/helpers/start_helper_containers.sh`)
     * `docker-compose -f docker-compose.consul.yml ...`
     * try to scale backend
     * look at the logs to see if the second backend is used
