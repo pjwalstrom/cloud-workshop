@@ -21,7 +21,7 @@ This downloads quite a lot of stuff so is smart to do on a fast network.
 To make it easier to access the web apps inside the VM, add the following to your `etc/hosts`:
 
 ```
-19.168.12.34    localdocker
+192.168.12.34    localdocker
 ```
 
 With this you can just open `http://localdocker:<port>`.
