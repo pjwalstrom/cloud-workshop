@@ -66,7 +66,7 @@ all traces of the virtual machine.
     * look at the logs to see if the second backend is used
     * what happens and why?
 * Work with a docker server in the cloud (Digital Ocean)
-    * first load the `env_for_digital_ocean.sh` into current shell
+    * first load the `helpers/env_for_digital_ocean.sh` into current shell
     * `docker-machine ...`
         * use the Digital Ocean API key you got in mail
     * create a new machine
