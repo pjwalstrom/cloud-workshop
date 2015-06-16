@@ -12,11 +12,14 @@ $ brew cask install virtualbox
 $ brew cask install vagrant
 ```
 
+Accounts on [Docker Hub](https://registry.hub.docker.com) and [GitHub](https://github.com) is also necessary.
+
 
 ## Setup
 
-To setup your environment for the workshop, run `vagrant up` in the root of the project.
-This downloads quite a lot of stuff so is smart to do on a fast network.
+To setup your environment for the workshop, fork this project and clone it locally. Then run
+`vagrant up` in the root of the project. This downloads quite a lot of stuff so is smart to
+do on a fast network.
 
 To make it easier to access the web apps inside the VM, add the following to your `etc/hosts`:
 
