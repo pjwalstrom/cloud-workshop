@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CONSUL=192.168.12.34
+CONSUL=$(route -n | awk '/UG / {print $2}')
 APP="java \
       -Djava.security.egd=file:/dev/./urandom \
       -jar /tmp/app.war"
@@ -17,7 +17,7 @@ if [ $rc != 0 ]; then
   $APP
 else
   /usr/bin/envconsul \
-    -consul ${CONSUL}:8500  \
+    -consul $CONSUL:8500  \
     -prefix registrator/unique_port \
     -upcase \
     $APP
